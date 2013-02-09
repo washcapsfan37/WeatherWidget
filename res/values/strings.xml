@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">Weather</string>
+    <string name="menu_settings">Settings</string>
+    <string name="connection_error">Unable to connect to network</string>
+    <string name="xml_error">Error retrieving weather data</string>
+    <string name="xml_feed">http://a4788423817.api.wxbug.net/getLiveWeatherRSS.aspx?ACode=A4788423817&amp;OutputType=1&amp;zipCode=</string>
+    <string name="xml_forecast_feed">http://a4788423817.api.wxbug.net/getForecastRSS.aspx?ACode=A4788423817&amp;OutputType=1&amp;zipCode=</string>
+    <string name="configure_btn">Find Your City</string>
+    <string name="configure_btn_submit">submit</string>
+    <string name="configure_btn_cancel">cancel</string>
+    <string name="configure_label">Zipcode: </string>
+	<string name="loading">loading</string>
+	<string name="loading_msg">loading weather&#8230;</string>
+	<string name="configure_header">Configuration</string>
+	<string name="error_no_network">You are not connected to the internet. Please check your settings.</string>
+	<string name="error_occurred">Error loading widget.</string>
+	
+</resources>

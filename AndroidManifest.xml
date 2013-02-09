@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.snappcloud.widget.weather"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk 
+        android:minSdkVersion="11" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	
+	<supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application 
+        android:icon="@drawable/icon" 
+        android:label="@string/app_name"
+        android:allowBackup="false">
+      
+        <activity android:name=".WeatherWidgetConfigure"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:exported="false">
+            <intent-filter>
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name=".WeatherWidget" android:label="@string/app_name">
+		   <intent-filter>
+		      <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		      <action android:name="android.appwidget.action.APPWIDGET_ENABLED" />
+		      <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
+		      <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+		      <action android:name="com.snappcloud.widget.weather.ACTION_WIDGET_RECEIVER"/>
+		      <action android:name="com.snappcloud.widget.weather.UPDATE_WIDGET_RECEIVER"/>
+		      <action android:name="com.snappcloud.widget.weather.CLOCK_WIDGET_RECEIVER"/>
+		      <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+		   </intent-filter>
+		   <meta-data android:name="android.appwidget.provider"
+                      android:resource="@xml/weatherflat_widget_provider" />
+		</receiver>
+
+		<service android:name=".UpdateService"
+		    android:exported="false">
+		    <intent-filter>
+		      <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+		   </intent-filter>
+	    </service>
+	    
+		<service android:name=".ClockService"
+		    android:exported="false">
+		    <intent-filter>
+		      <action android:name="android.intent.action.CONFIGURATION_CHANGED" />
+		   </intent-filter>
+	    </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/weatherbug_blue" >
+
+    <AbsoluteLayout
+        android:layout_width="137dp"
+        android:layout_height="185dp"
+        android:layout_centerInParent="true"
+        android:background="@color/weatherbug_blue" >
+
+        <ImageView
+            android:id="@+id/curCondImgView"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_x="9dp"
+            android:layout_y="33dp"
+            android:background="@color/weatherbug_blue"
+            android:contentDescription="@string/loading"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading" />
+
+        <TextView
+            android:id="@+id/tempTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="32dp"
+            android:layout_y="26dp"
+            android:gravity="top"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:lineSpacingMultiplier="1"
+            android:singleLine="true"
+            android:textColor="#010101"
+            android:textSize="37dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="63dp"
+            android:layout_x="97dp"
+            android:layout_y="30dp"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/highTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="#010101"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/lowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="#010101"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/curCondTextView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_x="8dp"
+            android:layout_y="73dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="@string/loading_msg"
+            android:textColor="#010101"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="1.5dp"
+            android:layout_x="8dp"
+            android:layout_y="115dp"
+            android:background="#FFFFFF" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="8dp"
+            android:layout_y="123dp"
+            android:gravity="left"
+            android:textColor="#010101"
+            android:textSize="17dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dowTextViewShort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="8dp"
+            android:layout_y="123dp"
+            android:gravity="left"
+            android:textColor="#010101"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="74dp"
+            android:layout_y="128dp"
+            android:gravity="right"
+            android:textColor="#010101"
+            android:textSize="13dp" />
+
+    </AbsoluteLayout>
+    
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:gravity="bottom|center"
+            android:background="#e6e7e8"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="fill_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="left"
+                android:background="#e6e7e8"
+                android:gravity="center"
+                android:text="@string/configure_btn"
+                android:textColor="#58595b"
+                android:textSize="9dp" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="16dp"
+                android:layout_gravity="right"
+                android:background="#a7a9ac"
+                android:gravity="center"
+                android:textColor="#414042"
+                android:textSize="9dp" />
+        </LinearLayout>
+
+</RelativeLayout>

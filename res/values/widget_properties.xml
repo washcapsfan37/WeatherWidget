@@ -1,0 +1,5 @@
+<resources>
+    <!-- WIDGET PROVIDER CONFIG -->
+	<dimen name="wdgt_min_width">185dp</dimen>
+	<dimen name="wdgt_min_height">140dp</dimen>
+</resources>
